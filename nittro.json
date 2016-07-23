@@ -1,0 +1,12 @@
+{
+    "files": {
+        "js": [
+            "src/js/Nittro/Storage/Storage.js",
+            "src/js/Nittro/Storage/Bridges/StorageDI.js"
+        ]
+    },
+    "compat": {
+        "es5": true,
+        "localStorage": true
+    }
+}
