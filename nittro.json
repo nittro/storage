@@ -5,6 +5,7 @@
             "src/js/Nittro/Storage/Bridges/StorageDI.js"
         ]
     },
+    "di": "Nittro.Storage.Bridges.StorageDI()",
     "compat": {
         "es5": true,
         "localStorage": true
