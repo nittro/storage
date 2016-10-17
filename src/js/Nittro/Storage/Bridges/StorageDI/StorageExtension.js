@@ -1,4 +1,4 @@
-_context.invoke('Nittro.Storage.Bridges.StorageExtension', function() {
+_context.invoke('Nittro.Storage.Bridges.StorageDI', function() {
 
     var StorageExtension = _context.extend('Nittro.DI.BuilderExtension', function(containerBuilder, config) {
         StorageExtension.Super.call(this, containerBuilder, config);
