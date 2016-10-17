@@ -1,11 +1,19 @@
 {
     "files": {
         "js": [
-            "src/js/Nittro/Storage/Storage.js",
-            "src/js/Nittro/Storage/Bridges/StorageDI.js"
+            "src/js/Nittro/Storage/Storage.js"
         ]
     },
-    "di": "Nittro.Storage.Bridges.StorageDI()",
+    "bridges": {
+        "nittro-di": {
+            "files": [
+                "src/js/Nittro/Storage/Bridges/StorageDI/StorageExtension.js"
+            ],
+            "extensions": {
+                "storage": "Nittro.Storage.Bridges.StorageDI.StorageExtension()"
+            }
+        }
+    },
     "compat": {
         "es5": true,
         "localStorage": true

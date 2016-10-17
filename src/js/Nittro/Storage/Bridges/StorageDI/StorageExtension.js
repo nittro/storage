@@ -1,11 +1,7 @@
-_context.invoke('Nittro.Storage.Bridges', function(Nittro) {
+_context.invoke('Nittro.Storage.Bridges.StorageExtension', function() {
 
-    if (!Nittro.DI) {
-        return;
-    }
-
-    var StorageDI = _context.extend('Nittro.DI.BuilderExtension', function(containerBuilder, config) {
-        StorageDI.Super.call(this, containerBuilder, config);
+    var StorageExtension = _context.extend('Nittro.DI.BuilderExtension', function(containerBuilder, config) {
+        StorageExtension.Super.call(this, containerBuilder, config);
     }, {
         load: function () {
             var builder = this._getContainerBuilder();
@@ -16,6 +12,6 @@ _context.invoke('Nittro.Storage.Bridges', function(Nittro) {
         }
     });
 
-    _context.register(StorageDI, 'StorageDI');
-    
+    _context.register(StorageExtension, 'StorageExtension');
+
 });
