@@ -1,4 +1,4 @@
-_context.invoke('Nittro.Storage.Bridges.StorageDI', function() {
+_context.invoke('Nittro.Extras.Storage.Bridges.StorageDI', function() {
 
     var StorageExtension = _context.extend('Nittro.DI.BuilderExtension', function(containerBuilder, config) {
         StorageExtension.Super.call(this, containerBuilder, config);
@@ -6,8 +6,8 @@ _context.invoke('Nittro.Storage.Bridges.StorageDI', function() {
         load: function () {
             var builder = this._getContainerBuilder();
 
-            builder.addServiceDefinition('persistentStorage', 'Nittro.Storage.Storage(namespace: null, persistent: true)');
-            builder.addServiceDefinition('sessionStorage', 'Nittro.Storage.Storage(namespace: null, persistent: false)');
+            builder.addServiceDefinition('persistentStorage', 'Nittro.Extras.Storage.Storage(namespace: null, persistent: true)');
+            builder.addServiceDefinition('sessionStorage', 'Nittro.Extras.Storage.Storage(namespace: null, persistent: false)');
 
         }
     });

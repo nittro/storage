@@ -1,4 +1,4 @@
-_context.invoke('Nittro.Storage', function() {
+_context.invoke('Nittro.Extras.Storage', function() {
 
     var Storage = _context.extend(function(namespace, persistent) {
         this._.persistent = persistent;
