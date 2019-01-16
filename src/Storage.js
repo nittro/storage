@@ -1,15 +1,16 @@
 _context.invoke('Nittro.Extras.Storage', function() {
 
     var Storage = _context.extend(function(namespace, persistent) {
-        this._.persistent = persistent;
-        this._.engine = persistent ? window.localStorage : window.sessionStorage;
-        this._.items = {};
-        this._.namespace = namespace || '';
-        this._.filters = {
-            'in': [],
-            out: []
+        this._ = {
+            persistent: persistent,
+            engine: persistent ? window.localStorage : window.sessionStorage,
+            items: {},
+            namespace: namespace || '',
+            filters: {
+                'in': [],
+                'out': []
+            }
         };
-
     }, {
         STATIC: {
             NAMESPACE_SEPARATOR: '/',
