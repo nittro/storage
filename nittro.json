@@ -1,6 +1,7 @@
 {
     "files": {
         "js": [
+            "src/DummyStorage.js",
             "src/Storage.js"
         ]
     },

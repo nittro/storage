@@ -1,9 +1,17 @@
-_context.invoke('Nittro.Extras.Storage', function() {
+_context.invoke('Nittro.Extras.Storage', function(DummyStorage) {
 
     var Storage = _context.extend(function(namespace, persistent) {
+        var engine;
+
+        try {
+            engine = persistent ? window.localStorage : window.sessionStorage;
+        } catch (e) {
+            engine = new DummyStorage();
+        }
+
         this._ = {
             persistent: persistent,
-            engine: persistent ? window.localStorage : window.sessionStorage,
+            engine: engine,
             items: {},
             namespace: namespace || '',
             filters: {
